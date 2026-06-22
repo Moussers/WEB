@@ -3,8 +3,21 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>                              <!--head - это заголовок html документа, который содержит метаданные.-->
-    <meta charset="utf-8" />        <!-- charset= "" - это формат (тип) кодировки, в данный UTF8-->
+    <meta charset="utf-8" >         <!-- charset= "" - это формат (тип) кодировки, в данный UTF8-->
     <title>HTML lesson 1</title>    <!--Титульник станицы *отображается в самом верху-->
+    <link rel="icon" href="bitcoin.png">
+    <style>
+        h2, h4, h6 
+        {
+            text-align:center;
+                color:red;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        h4 
+        {
+            color:darkgreen
+        }
+    </style>
 </head>
 <body>                              <!--body - это тело html документа, которое полностью отображается в браузере.-->
     <details>
@@ -20,11 +33,28 @@
     </details>
     <details>
         <summary>Дескрипторы</summary>
-        <b><tt>&#60;p&#62;</tt> (Paragraph)</b>         &#8211 этот дескриптор описывает абзац;<br/>
-        <b><tt>&lt;b&gt;</tt> (Bold)</b>                &ndash; <b>делает шрифт жирным</b>;<br/>
-        <b><tt>&#60;b&#62;</tt> (Italic)</b>            &#8210 <i>делает шрифт курсивным</i>;<br/>
-        <b><tt>&#60;b&#62;</tt> (Underline)</b>         &#8210 <u>делает шрифт подчеркнутым</u>;<br/>
-        <b><tt>&#60;b&#62;</tt> (Teletype text)</b>     &#8210 <tt>делает шрифт моноширным (каждый символ занимает одинаковую площадь на экране)</tt>;<br/>
+        <h2>Дескрипторы фезического форматирования</h2>
+        <b><code>&#60;p&#62;</code> (Paragraph)</b>         &#8211; этот дескриптор описывает абзац;<br>
+        <b><code>&lt;b&gt;</code> (Bold)</b>                &ndash; <b>делает шрифт жирным</b>;<br>        <!--lt (less than), gt (greater than)-->
+        <b><code>&#60;i&#62;</code> (Italic)</b>            &#8210; <i>делает шрифт курсивным</i>;<br>
+        <b><code>&#60;u&#62;</code> (Underline)</b>         &#8210; <u>делает шрифт подчеркнутым</u>;<br>
+        <b><code>&#60;tt&#62;</code> (Teletype text)</b>     &#8210; <code>делает шрифт моноширным (каждый символ занимает одинаковую площадь на экране)</code>;<br>
+        <b><code>&#60;sup&#62;</code> (Superscript)</b>     &#8210; <code>Верхний <sup>индекс</sup></code>;<br>
+        <b><code>&#60;sub&#62;</code> (Subscript)</b>     &#8210; <code>Нижний <sub>индекс</sub></code>;<br>
+        <b><code>&#60;pre&#62;</code> (Preforamted)</b>     &#8210; <pre>Это дескиптор создает предформатированный текст, 
+в котором сохраняются отступы
+и переносы строк.
+Кроме того <b>предформатированный</b> текст всегда отображается <b>моноширным</b> шрифтом.                      <!--<b> - нужен для поисковых роботов-->
+</pre>;<br>
+        <hr>                                                                                                    <!--hr - рисует линию-->
+        <h2>Дескрипторы логического форматирования</h2>                                                         <!--align=""- выравнивает текст по тому что задан в кавыччках: center (по центру)-->
+        <strong><code>&#60;strong&#62;</code> (Bold)</strong> &#8211; делает шрифт <strong>жирным;</strong><br> <!--left (по левому краю) и right (по правому краю)-->
+        <strong><code>&#60;em&#62;</code> (Emphasis)</strong> &#8211; делает шрифт <em>курсивным;</em><br>      <!--alt + shift + w - оборачивает в конструкцию div-->
+        <strong><code>&#60;code&#62;</code> (Mono)</strong> &#8211; делает шрифт <code>моноширным;</code><br>
+        <strong><code>&#60;abbr&#62;</code> (Abbreviation)</strong> &#8211; этим дескриптором желательно выделять<abbr>абревиатуры;</abbr><br>
+        <strong><code>&#60;сite&#62;</code> (Citation)</strong> &#8211; этим дескриптором желательно выделять<cite>цитаты;</cite><br>
+        <hr>
     </details>
+    <h2>CSS - Cascade Style Sheet</h2>
 </body>
 </html>
