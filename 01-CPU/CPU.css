@@ -1,0 +1,21 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body
+{
+    font-family:'Roboto Condenced';
+    font-size:20px;
+}
+p 
+{
+    text-align: justify;
+}
+img 
+{
+    margin:0 auto;
+    width:50%;
+}
+figure 
+{
+    text-align:center;
+    font-style:italic;
+    font-weight:100;
+}
