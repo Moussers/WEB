@@ -3,11 +3,18 @@ body
 {
     font-family:'Roboto Condenced';
     font-size:20px;
+    padding:1%5%          /*padding - оступы слева и справа на web-странице*/
 }
 p 
 {
     text-align: justify;    /*justify - выравнить по ширине*/
+    text-indent:48px;
 }
+    p::first-letter 
+    {
+        font-size:32px;
+        font-family:'Segoe Script'
+    }
 img 
 {
     margin:0 auto;
@@ -23,3 +30,22 @@ ul
 {
     list-style:none;
 }
+a
+{
+    text-decoration:none        /*text-decoration:none - при наведении не подчеркивает ссылки*/
+}
+    a:active 
+    {
+        color:green;
+    }
+    a:visited 
+    {
+        color:darkgreen;
+    }
+    a:hover 
+    {
+        font-weight: 800;
+        background-color: black;
+        color: white;
+    }
+
