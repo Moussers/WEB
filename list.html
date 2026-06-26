@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Списки</title>
+    <style>
+        ol /*ol - элемент упорядоченного списка HTML*/ 
+        {
+            /*list-style:georgian;*/
+        }
+        /*li 
+        {
+            list-style: none;
+        }
+        ul*/ /*ul - элемент неупорядоченный списка*/ 
+        /*{*/
+
+            /*list-style: circle;*/
+            /*list-style-image:url("00-Intro/bitcoin.png");
+        }*/
+    </style>
+</head>
+<body>
+    <h1>Списки</h1>
+    <h2>Нумерованный список</h2>
+    <h2>Список определений</h2>
+    <p>Позволяет создавать списки терминов с их разъяснением</p>
+    <strong><code>&#60;dl&#62;</code></strong> &#8213; Definitions List;<br>
+    <strong><code>&#60;dt&#62;</code></strong> &#8213; Description Term;<br>
+    <strong><code>&#60;dd&#62;</code></strong> &#8213; Description Details;<br>
+    <strong><code>&#60;dt&#62;</code></strong> и <strong><code>&#60;dd&#62;</code></strong> всегда
+    используются парой.
+    <dl>
+        <dt>Нумерованый список</dt>
+        <dd>
+            Позволяет нумеровать элементы тектса. Это нужно для
+            перечисления в строгом порядке.
+        </dd>
+        <dt>Марикрованный список</dt>
+        <dd>Позволяет перечислить элементы текста в любом порядке.</dd>
+        <dt>Список определений</dt>
+        <dd>Позволяет перечислять понятия и давать им определения.</dd>
+    </dl>
+    <hr>
+    <h2>Маркированный список</h2>
+    <strong><code>&#60;ol&#62;</code></strong> &#8213; Unordered List;<br>
+    <strong><code>&#60;li&#62;</code></strong> &#8213; List Item;<br>
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ol>
+    <p>При необходимости список можно прервать и продолжить позже</p>
+    <ol start="6">
+        <li>Продолжение первого списка</li>
+        <li>Продолжение первого списка</li>
+        <li>Продолжение первого списка</li>
+        <li>Продолжение первого списка</li>
+        <li>Продолжение первого списка</li>
+    </ol>
+</body>
+</html>
