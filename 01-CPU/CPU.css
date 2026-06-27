@@ -29,7 +29,7 @@ figure
 }
 ul 
 {
-    list-style:none;
+    list-style:none;            /*list-style:none - убирает обозначение точек (маркеров) для маркерованного списка*/
 }
 a
 {
