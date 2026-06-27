@@ -5,25 +5,24 @@
     <meta charset="utf-8" />
     <title>Списки</title>
     <style>
-        ol /*ol - элемент упорядоченного списка HTML*/ 
-        {
-            /*list-style:georgian;*/
-        }
-        /*li 
-        {
-            list-style: none;
-        }
-        ul*/ /*ul - элемент неупорядоченный списка*/ 
+        /*ol*/ /*ol - элемент упорядоченного списка HTML*/ 
         /*{*/
+            /*list-style:georgian;*/
+        /*}
+        li {*/
+          /*list-style: none;
+            list-style-image: url("00-Intro/bitcoin.png");*/
+        /*}
+        ul*/  /*ul - элемент неупорядоченный списка*/ 
+        /*{
 
-            /*list-style: circle;*/
-            /*list-style-image:url("00-Intro/bitcoin.png");
+            list-style: circle;
+            list-style-image: url("00-Intro/bitcoin.png");
         }*/
     </style>
 </head>
 <body>
     <h1>Списки</h1>
-    <h2>Нумерованный список</h2>
     <h2>Список определений</h2>
     <p>Позволяет создавать списки терминов с их разъяснением</p>
     <strong><code>&#60;dl&#62;</code></strong> &#8213; Definitions List;<br>
@@ -32,20 +31,16 @@
     <strong><code>&#60;dt&#62;</code></strong> и <strong><code>&#60;dd&#62;</code></strong> всегда
     используются парой.
     <dl>
-        <dt>Нумерованый список</dt>
-        <dd>
-            Позволяет нумеровать элементы тектса. Это нужно для
-            перечисления в строгом порядке.
-        </dd>
-        <dt>Марикрованный список</dt>
-        <dd>Позволяет перечислить элементы текста в любом порядке.</dd>
-        <dt>Список определений</dt>
-        <dd>Позволяет перечислять понятия и давать им определения.</dd>
+        <dt>Нумерованый список</dt><dd>Позволяет нумеровать элементы тектса. Это нужно для
+            перечисления в строгом порядке.</dd>
+        <dt>Марикрованный список</dt><dd>Позволяет перечислять элементы текста в любом порядке.</dd>
+        <dt>Список определений</dt><dd>Позволяет перечислять понятия и давать им определения.</dd>
     </dl>
     <hr>
-    <h2>Маркированный список</h2>
-    <strong><code>&#60;ol&#62;</code></strong> &#8213; Unordered List;<br>
-    <strong><code>&#60;li&#62;</code></strong> &#8213; List Item;<br>
+    <h2>Нумерованный список</h2>
+    <strong><code>&#60;ol&#62; &#8213;</code></strong> Ordered List;<br>    <!--ordered list (упорядоченный список) - представляет собой упорядоченный список
+                                                                            элементов, обычно отображаемый в виде нумерованного списка.-->
+    <strong><code>&#60;li&#62; &#8213;</code></strong> List Item;<br>       <!--li - используется для создания элементов списка-->
     <ol>
         <li>List Item 1</li>
         <li>List Item 2</li>
@@ -61,5 +56,18 @@
         <li>Продолжение первого списка</li>
         <li>Продолжение первого списка</li>
     </ol>
+    <hr>
+    <h2>Маркированный список</h2>
+    <strong><code>&#60;ul&#62; &#8213;</code></strong> Unordered List;<br>
+    <strong><code>&#60;li&#62; &#8213;</code></strong> List Item;<br>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+
 </body>
 </html>

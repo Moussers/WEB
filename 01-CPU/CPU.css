@@ -1,4 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/*ctrl + F5 - сбрасывает CSS кэш в браузере*/
 body
 {
     font-family:'Roboto Condenced';
@@ -7,7 +8,7 @@ body
 }
 p 
 {
-    text-align: justify;    /*justify - выравнить по ширине*/
+    text-align:justify;    /*justify - выравнить по ширине*/
     text-indent:48px;
 }
     p::first-letter 
@@ -34,18 +35,20 @@ a
 {
     text-decoration:none        /*text-decoration:none - при наведении не подчеркивает ссылки*/
 }
-    a:active 
+    
+    a:active                    /*a:active - выделяет при нажатии*/
     {
         color:green;
     }
-    a:visited 
+    a:visited
     {
         color:darkgreen;
     }
-    a:hover 
+    a:hover                     /*Порядок размещения структур важен, чем ниже тем позже применяется*/
     {
         font-weight: 800;
         background-color: black;
         color: white;
     }
+    
 
