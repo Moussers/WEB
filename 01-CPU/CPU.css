@@ -4,6 +4,7 @@ body
 {
     font-family:'Roboto Condenced';
     font-size:20px;
+    color: lightyellow;
     padding:1%5%;          /*padding - оступы слева и справа на web-странице*/
     background-image:url(img/pcb-v2.jpg);
     background-attachment:fixed;
@@ -30,23 +31,25 @@ figure
     text-align:center;
     font-style:italic;
     font-weight:100;
+    color:beige;
 }
 ul 
 {
     list-style:none;            /*list-style:none - убирает обозначение точек (маркеров) для маркерованного списка*/
 }
-a
+a                               /*a - отвечает за ссылки, к примеру a href*/
 {
-    text-decoration:none        /*text-decoration:none - при наведении не подчеркивает ссылки*/
+    text-decoration:none;        /*text-decoration:none - при наведении не подчеркивает ссылки*/
+    color:gold;
 }
     
     a:active                    /*a:active - выделяет при нажатии*/
     {
         color:green;
     }
-    a:visited
+    a:visited                   /*a:visited - отвечает за посещенные за (нажатые) ссылки*/
     {
-        color:darkgreen;
+        color:floralwhite;
     }
     a:hover                     /*Порядок размещения структур важен, чем ниже тем позже применяется*/
     {
@@ -54,14 +57,14 @@ a
         background-color: black;
         color: white;
     }
-:target /*> span*/        /* > знак вложенности*/
-{
-    background-color:limegreen;
+:target /*> span*/        /*Когда мы ставим знак больше (>) - это означает, что span непосредственно*/
+{                         /*вложен в h2, к нему применится background-color набор стилей*/
+    background-color:limegreen;     /* > - знак вложенности */
 }
     :target + div
     {
-        /*background-color:#ABABAB;*/
-        border-radius: 15%;
+      /*background-color:#ABABAB;*/
+        border-radius: 15px;
         box-shadow: 0 0 25px 25px rgba(220, 220, 220, .7);
     }
 div
