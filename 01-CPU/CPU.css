@@ -4,12 +4,12 @@ body
 {
     font-family:'Roboto Condenced';
     font-size:20px;
-    color: lightyellow;
+    color: black;
     padding:1%5%;          /*padding - оступы слева и справа на web-странице*/
-    background-image:url(img/pcb-v2.jpg);
+    /*background-image:url(img/pcb-v2.jpg);
     background-attachment:fixed;
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:cover;*/
 }
 p 
 {
@@ -31,7 +31,7 @@ figure
     text-align:center;
     font-style:italic;
     font-weight:100;
-    color:beige;
+    color:black;
 }
 ul 
 {
@@ -49,7 +49,7 @@ a                               /*a - отвечает за ссылки, к п�
     }
     a:visited                   /*a:visited - отвечает за посещенные за (нажатые) ссылки*/
     {
-        color:floralwhite;
+        color:black;
     }
     a:hover                     /*Порядок размещения структур важен, чем ниже тем позже применяется*/
     {
@@ -107,5 +107,21 @@ div > p
     {
         /*Стили будут применяться только к тем элементам <p>, которые непосредственно следуют */
     }
-
+.cite
+{
+    /*border: solid 8px;*/
+    border-left: solid 5px blue;
+    margin: 50px  150px 250px;/*Внешний отступ*/
+/*margin: all-sides;*/
+/*margin: top-bottom left-right*/
+/*margin: top left-right bottom*/
+/*margin: top right bottom left*/
+    padding: 30px;/*Внутренний отступ*/
+/*margin: all-sides;*/
+/*padding: top-bottom left-right*/
+/*padding: top left-right bottom*/
+/*padding: top right bottom left*/
+/*margin-left:....*/
+/*padding-top:....*/
+}
 
