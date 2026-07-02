@@ -6,9 +6,8 @@ body {
     color: black;
     padding: 1%5%; /*padding - оступы слева и справа на web-странице*/
     /*background: linear-gradient(180deg, #808080)*/ /*deg (degree) - градус*/
-    /*background-image: linear-gradient(to left, #ff7e5f, #feb47b),url(img/pcb-v2.jpg);*/
+    background-image: linear-gradient(rgba(120, 140, 16, 0.6), rgba(214, 88, 13, 0.6)),url(img/pcb-v2.jpg);     /*для картинки свой собственый rgba нужен, который идёт вторым параметром*/
     /*background-image: linear-gradient(to right, rgba(255, 126, 95, 0.8));*/
-    background-image: url(img/pcb-v2.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,8 +41,9 @@ ul
 a                               /*a - отвечает за ссылки, к примеру a href*/
 {
     text-decoration:none;        /*text-decoration:none - при наведении не подчеркивает ссылки*/
-    color:gold;
-    box-shadow: 0px 0px  1px 2px rgb(255, 68, 205);
+    color:black;
+    /*box-shadow: 0px 0px  1px 2px rgba(255, 68, 205);*/
+    text-shadow: 0 0 3px yellow, 0 0 6px aqua, 0 0 8px beige;
 }
     
     a:active                    /*a:active - выделяет при нажатии*/
@@ -52,7 +52,7 @@ a                               /*a - отвечает за ссылки, к п�
     }
     a:visited                   /*a:visited - отвечает за посещенные за (нажатые) ссылки*/
     {
-        color:black;
+        color:rgba(90,90,50,1);
     }
     a:hover                     /*Порядок размещения структур важен, чем ниже тем позже применяется*/
     {
@@ -60,23 +60,65 @@ a                               /*a - отвечает за ссылки, к п�
         background-color: black;
         color: white;
     }
+ol 
+{
+    color: rgba(90,90,50,1);
+    text-shadow: 0 0 3px yellow, 0 0 6px aqua, 0 0 8px beige;
+}
 :target /*> span*/        /*Когда мы ставим знак больше (>) - это означает, что span непосредственно*/
 {                         /*вложен в h2, к нему применится background-color набор стилей*/
-    background-color:limegreen;     /* > - знак вложенности */
+    /*background-color:limegreen;*/     /* > - знак вложенности */
 }
     :target + div
     {
-        background-color:#fadfaf;
+        /*background-color:#fadfaf;*/
         border-radius: 15px;
+        background-color:rgba(240, 240, 240, 0.4);              
         box-shadow: 0 0 25px 25px rgba(220, 220, 220, .7);      /*box-shadow - отвечает за подсветку*/
     }
+    /*rgba:
+    *Первый цвет: красный;
+    *Второй цвет: синий;
+    *Третий цвет: зелёный.
+    */
 div
 {
     padding: 16px;
+    
 }
-div > p 
+h2 
 {
-    /*Стили будут применяться только к тем элементам <p>, которые непосредственно вложены в элемент <div>
+    color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+}
+
+    h2 > span 
+    {
+        color: rgba(140,142,44,0.8);
+        text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 4px beige;
+    }
+
+h4 
+{
+    color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+}
+    /*div > p::selection*/        /*если выделить текст мышкой*/
+    /*{
+        background-color:red;
+    }*/
+
+    div > figure > figcaption 
+    {
+        background-color:antiquewhite;
+    }
+    div > figure > a:hover 
+    {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    div > p 
+    {
+        /*Стили будут применяться только к тем элементам <p>, которые непосредственно вложены в элемент <div>
     -----------------------------------------------------------------------------------------------------
     <div>
         <p>Здесь стили применятся</p>
@@ -86,6 +128,30 @@ div > p
         <p>Здесь стили применятся</p>
     </div>
     */
+        background-color:blanchedalmond;
+        border-radius:12px;
+    }
+
+h3 
+{
+    color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+}
+    figure > figcaption 
+    {
+        color: rgba(199, 212, 146);
+        text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+    }
+h1 
+{
+    color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+}
+div > h3 {
+    /*background-color:blanchedalmond;*/
+    border-radius: 12px;
+    color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
 }
     div > article > p 
     {
@@ -97,8 +163,17 @@ div > p
     {
         /* это будет отрабатывать и для всех остальных article, которые наодятся и за пределелами p.*/
     }
-
-    div p 
+p 
+{
+    border-radius: 12px;
+    background-color: antiquewhite;
+}
+cite 
+{
+    color: rgba(196, 212, 107);
+    text-shadow: 0 0 3px #696921, 0 0 6px aqua, 0 0 2px beige;
+}
+    div > p 
     {
         /*Стили будут применяться только к тем элементам <p>, которые вложены в элемент <div> на любой уровень глубины
         --------------------------------------------------------------------------------------------------------------
