@@ -1,0 +1,33 @@
+﻿table 
+{
+    background-color: #00ffff;
+    border: 1px solid black;    /*цвет границы таблицы*/
+    width: 980px;               /*ширина для таблицы*/
+}
+td 
+{
+    background-color: #00ffff;      /*голубой цвет*/
+    border: 1px solid black;
+    width: 70px;        /*ширина для каждой ячейки*/
+    height: 20px;       /*высота для каждой ячейки*/
+}
+.olivetd 
+{
+    background-color: #666600;
+}
+.redtd 
+{
+    background-color: red;
+}
+.bluetd 
+{
+    background-color: blue;
+}
+.yelltd 
+{
+    background-color: yellow;
+}
+.browntd 
+{
+    background-color: #784315
+}
