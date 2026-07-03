@@ -1,12 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 /*ctrl + F5 - сбрасывает CSS кэш в браузере*/
-body {
+body 
+{
     font-family: 'Roboto Condenced';
     font-size: 20px;
-    color: black;
+    color: rgba(196, 189, 70, 0.8);
     padding: 1%5%; /*padding - оступы слева и справа на web-странице*/
     /*background: linear-gradient(180deg, #808080)*/ /*deg (degree) - градус*/
-    background-image: linear-gradient(rgba(120, 140, 16, 0.6), rgba(214, 88, 13, 0.6)),url(img/pcb-v2.jpg);     /*для картинки свой собственый rgba нужен, который идёт вторым параметром*/
+    background-image: linear-gradient(rgba(120, 140, 16, 0.6), rgba(214, 88, 13, 0.6)), url(img/pcb-v2.jpg);     /*для картинки свой собственый rgba нужен, который идёт вторым параметром*/
     /*background-image: linear-gradient(to right, rgba(255, 126, 95, 0.8));*/
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -16,7 +17,17 @@ p
 {
     text-align:justify;    /*justify - выравнить по ширине*/
     text-indent:48px;
+    border-radius: 12px;
+    color: rgba(196, 212, 107);
+    text-shadow: 0 0 3px #696921, 0 0 6px aqua, 0 0 2px beige;       /*text-shadow - отвечает за подсветку букв в тексте*/
 }
+
+    /*rgba:
+    *Первый цвет: красный;
+    *Второй цвет: синий;
+    *Третий цвет: зелёный.
+    */
+
     p::first-letter 
     {
         font-size:32px;
@@ -65,41 +76,38 @@ ol
     color: rgba(90,90,50,1);
     text-shadow: 0 0 3px yellow, 0 0 6px aqua, 0 0 8px beige;
 }
-:target /*> span*/        /*Когда мы ставим знак больше (>) - это означает, что span непосредственно*/
-{                         /*вложен в h2, к нему применится background-color набор стилей*/
-    /*background-color:limegreen;*/     /* > - знак вложенности */
+:target /*> span*/ /*Когда мы ставим знак больше (>) - это означает, что span непосредственно*/
+{ /*вложен в h2, к нему применится background-color набор стилей*/
+    /*background-color:limegreen;*/ /* > - знак вложенности */
+    border-radius: 15px; 
+    background-color: rgba(240, 240, 240, 0.4); 
+    box-shadow: 0 0 25px 25px rgba(220, 220, 220, .7);
 }
-    :target + div
-    {
-        /*background-color:#fadfaf;*/
-        border-radius: 15px;
-        background-color:rgba(240, 240, 240, 0.4);              
-        box-shadow: 0 0 25px 25px rgba(220, 220, 220, .7);      /*box-shadow - отвечает за подсветку*/
-    }
-    /*rgba:
-    *Первый цвет: красный;
-    *Второй цвет: синий;
-    *Третий цвет: зелёный.
-    */
-div
-{
-    padding: 16px;
     
-}
+        :target + div                                           /*Псевдокласс CSS :target используется для оформления текущего активного целевого элемента.*/
+        {                                                       /*target - применется только тем структурам и частям текста, перед которыми стоит решётка (#)*/
+            border-radius: 15px;                                /*и которая является ссылкой на определленную часть страницы через href, применяет заданные в */
+            background-color: rgba(240, 240, 240, 0.4);         /*фигурных скобках параметры только к тем частям текста на которую якорь (ссылка) сылается*/
+            box-shadow: 0 0 25px 25px rgba(220, 220, 220, .7);  /*через id, у которого есть соотвествующее название.*/
+        }
+        
 h2 
-{
-    color: rgba(140,142,44,0.8);
-    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+{                                           /*подбирать цвет rgba (сочитание: красного, синего, зелёного), лучше подбирать*/
+    color: rgba(140,142,44,0.8);            /*в программе paint в Windows, или в похожей программе в других ОС)*/
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;      
 }
 
     h2 > span 
     {
+        /*background-color: rgba(240, 240, 240, 0.4);*/
         color: rgba(140,142,44,0.8);
-        text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 4px beige;
+        text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
     }
 
 h4 
 {
+    /*color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;*/
     color: rgba(140,142,44,0.8);
     text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
 }
@@ -110,15 +118,15 @@ h4
 
     div > figure > figcaption 
     {
-        background-color:antiquewhite;
+        /*background-color:antiquewhite;*/
     }
     div > figure > a:hover 
     {
         background-color: rgba(0, 0, 0, 0);
     }
-    div > p 
-    {
-        /*Стили будут применяться только к тем элементам <p>, которые непосредственно вложены в элемент <div>
+div > p 
+{
+    /*Стили будут применяться только к тем элементам <p>, которые непосредственно вложены в элемент <div>
     -----------------------------------------------------------------------------------------------------
     <div>
         <p>Здесь стили применятся</p>
@@ -128,30 +136,39 @@ h4
         <p>Здесь стили применятся</p>
     </div>
     */
-        background-color:blanchedalmond;
-        border-radius:12px;
-    }
+    /*  background-color:blanchedalmond;
+        border-radius:12px;*/
+    color: rgba(196, 212, 107);
+    text-shadow: 0 0 3px #696921, 0 0 6px aqua, 0 0 2px beige;
+}
 
 h3 
 {
-    color: rgba(140,142,44,0.8);
-    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+    /*color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;*/
+    color: rgba(196, 212, 107);
+    text-shadow: 0 0 3px #696921, 0 0 6px aqua, 0 0 2px beige;
 }
-    figure > figcaption 
-    {
-        color: rgba(199, 212, 146);
-        text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
-    }
+figure > figcaption 
+{
+    /*color: rgba(207, 186, 104);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 1px beige;*/
+    color: rgba(196, 212, 107);
+    text-shadow: 0 0 3px #696921, 0 0 6px aqua, 0 0 2px beige;
+}
 h1 
 {
     color: rgba(140,142,44,0.8);
     text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
 }
-div > h3 {
+div > h3 
+{
     /*background-color:blanchedalmond;*/
     border-radius: 12px;
-    color: rgba(140,142,44,0.8);
+    color: rgba(140,142,44,0.8); 
     text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;
+    /*color: rgba(140,142,44,0.8);
+    text-shadow: 0 0 3px #D2D442, 0 0 6px aqua, 0 0 2px beige;*/
 }
     div > article > p 
     {
@@ -163,11 +180,6 @@ div > h3 {
     {
         /* это будет отрабатывать и для всех остальных article, которые наодятся и за пределелами p.*/
     }
-p 
-{
-    border-radius: 12px;
-    background-color: antiquewhite;
-}
 cite 
 {
     color: rgba(196, 212, 107);
@@ -194,21 +206,29 @@ cite
     {
         /*Стили будут применяться ко всем элемента <p>, которые следуют за элементом <div> (на одной глубине????)*/
     }
-.cite
-{
+.cite {
     /*border: solid 8px;*/
     border-left: solid 5px blue;
-    margin: 50px  150px 250px;/*Внешний отступ*/
-/*margin: all-sides;*/
-/*margin: top-bottom left-right*/
-/*margin: top left-right bottom*/
-/*margin: top right bottom left*/
-    padding: 30px;/*Внутренний отступ*/
-/*margin: all-sides;*/
-/*padding: top-bottom left-right*/
-/*padding: top left-right bottom*/
-/*padding: top right bottom left*/
-/*margin-left:....*/
-/*padding-top:....*/
+    /*margin-left:....*/
+    /*padding-top:....*/
+    margin: 50px 100px 200px 300px;   /*Внешний отступ*/
+                                /*margin - внешнее расстояние, по горизонтали и верстикали*/
+                                /*для класса (cite)*/
+    /*margin: all-sides;*/                /*all-sides - применить одно значение со всех сторон.*/
+    /*margin: top-bottom left-right;*/    /*2 значения. Первое значение верх, вниз.*/
+                                          /*Второе влево, вправо.*/
+    /*margin: top left-right bottom;*/    /*3 значения. Первое значение верх. Второе*/
+                                          /*влево, вправо. Третье низ.*/
+    /*margin: top right bottom left;*/   
+    /*margin: 50px 150px;*/                /*Первое значение - это верх;*/
+                                           /*Второе значение - это влево, вправо;*/
+    /*margin: 50px 200px 300px;*/          /*Третье значение - это низ.*/
+    padding: 30px;              /*Внутренний отступ*/
+    /*padding: all-sides;*/
+    /*padding: top-bottom left-right*/
+    /*padding: top left-right bottom*/
+    /*padding: top right bottom left*/
+
+    
 }
 
