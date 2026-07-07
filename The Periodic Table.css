@@ -1,9 +1,9 @@
 ﻿table
 {
+    border-collapse:collapse;
     border: solid black 1px;
     width: 980px;
 }
-
 td 
 {
     border: solid 1px;
@@ -39,4 +39,113 @@ td
 .chem-numbers 
 {
     text-align: center;
+}
+.number 
+{
+    text-align: right;
+}
+.newtable 
+{
+    border-collapse:collapse;
+    border: none;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    line-height: 1;
+}
+.num_el 
+{
+    font-size: 10px;
+}
+.name_el 
+{
+    font-size: 25px;
+}
+.newtd 
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: top;
+    text-align: right;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+.newtd2 
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: bottom;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.newtd3 
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: bottom;
+    text-align: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.left_ch
+{
+    border:none;
+    border-collapse:collapse;
+    text-align: left;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+.left_num
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: top;
+    text-align: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.left_num
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: top;
+    text-align: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.right_ch 
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: top;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.right_name 
+{
+    border: none;
+    border-collapse: collapse;
+    vertical-align: central;
+    vertical-align: bottom;
+    text-align: right;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
