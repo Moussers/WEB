@@ -23,6 +23,11 @@ td
     text-align:right;
     background-color: #66FCEF;
 }
+.light-greentd
+{
+    text-align: right;
+    background-color: #B6FF18;
+}
 .transitiontd 
 {
     font-size: 25px;
@@ -148,4 +153,9 @@ td
     margin: 0;
     padding: 0;
     line-height: 0;
+}
+.vert-text 
+{
+    writing-mode: sideways-lr;      /*writing-mode - отвечает в каком стиле писать текст:*/
+                                    /*вертикальном или горизонтальном*/
 }
