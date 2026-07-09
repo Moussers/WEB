@@ -9,7 +9,7 @@
 }
 .main-window
 {
-    width: 300px;
+    width: 310px;
     height: 400px;
 }
 .title-bar
@@ -53,12 +53,13 @@
 }
 .control-button 
 {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     font-weight: 800;
-    font-size: 15px;
-    padding: 0px 1px 8px 1px;
-    position: relative;
+    font-size: 18px;
+    line-height: 10px;
+    padding: 5px 1px 8px 1px;
+    position:relative;
     border: solid 1px white;
     border-radius: 4px;
     color: white;
@@ -69,15 +70,23 @@
 }
 .close-button 
 {
-    font-size: 15px;
+    font-size: 18px;
+    padding: 0px 1px 3px 1px;
+    margin-top: 4px;
     background-color: rgb(221, 85, 26);
+    line-height: 0px;
     box-shadow: 
         inset -1px -1px 4px 0px #880000,
         inset 4px 2px 4px 0px #FF8888; 
 }
+.minimaze-button {
+    text-align: left;
+    line-height: 2px;
+    padding-left: 1px;
+}
 .client-rect 
 {
-    border: solid white 1px;
+    border: solid #1E66F4 2px;
     background-color: #FFECEAD9;
 }
 .buttons 
@@ -90,30 +99,32 @@
     width: 280px;
     height: 20px;
     background-color: white;
-    margin: 2px 5px;
+    margin: 2px 0px 0px 10px;
 }
 .edit-button 
 {
     border: none;
     margin: 0px 0px 3px 3px;
-    background-color: #FFECEAD9;
+    background-color: #FFECEA00;        /*два последних нуля прозрачность альфа канал*/
 }
 .view-button 
 {
     border: none;
-    background-color: #FFECEAD9;
+    background-color: #FFECEA00;
 }
 .exit-button 
 {
     border: none;
-    background-color: #FFECEAD9;
+    background-color: #FFECEA00;
 }
 .empty-button 
 {
-    border: solid black 1px;
+    border: none;
     height: 20px;
     width: 20px;
-    margin: 3px 0px 0px 5px;
+    margin: 10px 0px 0px 5px;
+    box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.3),          
+                inset -1px -1px 0px 0px rgba(255,255,255,0.3);  /*в box shadow можно помещать два inset влияющих на box-shadow (кнопку)*/
 }
 .back-button 
 {
@@ -121,9 +132,11 @@
     border-radius: 3px;
     color: #BB1F22;
     font-size: 14px;
-    width: 67px;
+    width: 80px;
+    height: 25px;
     padding: 0px 2px 1px 0px;
     margin: 2px 0px 2px 4px;
+    vertical-align: 6px;
     font-family: Tahoma;
 }
 .ce-button 
@@ -132,7 +145,9 @@
     border-radius: 3px;
     color: #BB1F22;
     font-size: 12px;
-    width: 45px;
+    width: 80px;
+    height: 25px;
+    vertical-align: 6px;
     font-family: Tahoma;
 }
 .clr-button 
@@ -140,7 +155,10 @@
     border: solid #08395F 1px;
     border-radius: 3px;
     color: #BB1F22;
-    font-size: 12px;
+    font-size: 14px;
+    width: 80px;
+    height: 25px;
+    vertical-align: 6px;
     font-family: Tahoma;
 }
 .mc-button 
@@ -151,7 +169,8 @@
     font-size: 14px;
     margin: 2px 0px 2px 5px;
     padding: 0px 2px 0px 0px;
-    width: 22px;
+    height: 25px;
+    width: 28px;
     font-family: Tahoma;
 }
 .mr-button 
@@ -162,7 +181,8 @@
     font-size: 14px;
     margin: 2px 0px 2px 5px;
     padding: 0px 2px 0px 0px;
-    width: 24px;
+    height: 25px;
+    width: 28px;
     font-family: Tahoma;
 }
 .ms-button 
@@ -173,7 +193,8 @@
     font-size: 14px;
     margin: 2px 0px 2px 5px;
     padding: 0px 2px 0px 0px;
-    width: 24px;
+    height: 25px;
+    width: 28px;
     font-family: Tahoma;
 }
 .mpls-button 
@@ -182,12 +203,30 @@
     border-radius: 3px;
     color: #BB1F22;
     font-size: 14px;
+    height: 25px;
+    width: 27px;
     margin: 2px 0px 4px 5px;
     padding: 0px 2px 0px 0px;
-    width: 24px;
-    font-family: Tahoma;
+    width: 30px;
 }
-.div 
+.left-button 
 {
-    border: solid blue 1px;
+    margin-left: 8px;
+}
+.standart-button 
+{
+    height: 25px;
+    width: 46px;
+}
+.blue-but 
+{
+    color: #0000BD;
+}
+.red-but 
+{
+    color: #BB1F22;
+}
+.null-button 
+{
+    margin-left: 6px;
 }
