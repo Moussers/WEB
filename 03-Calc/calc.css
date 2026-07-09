@@ -9,8 +9,8 @@
 }
 .main-window
 {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
 }
 .title-bar
 {
@@ -69,8 +69,125 @@
 }
 .close-button 
 {
+    font-size: 15px;
     background-color: rgb(221, 85, 26);
     box-shadow: 
         inset -1px -1px 4px 0px #880000,
         inset 4px 2px 4px 0px #FF8888; 
+}
+.client-rect 
+{
+    border: solid white 1px;
+    background-color: #FFECEAD9;
+}
+.buttons 
+{
+    background-color: transparent;
+}
+.display-field 
+{
+    border: solid #8798A9 1px;
+    width: 280px;
+    height: 20px;
+    background-color: white;
+    margin: 2px 5px;
+}
+.edit-button 
+{
+    border: none;
+    margin: 0px 0px 3px 3px;
+    background-color: #FFECEAD9;
+}
+.view-button 
+{
+    border: none;
+    background-color: #FFECEAD9;
+}
+.exit-button 
+{
+    border: none;
+    background-color: #FFECEAD9;
+}
+.empty-button 
+{
+    border: solid black 1px;
+    height: 20px;
+    width: 20px;
+    margin: 3px 0px 0px 5px;
+}
+.back-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    width: 67px;
+    padding: 0px 2px 1px 0px;
+    margin: 2px 0px 2px 4px;
+    font-family: Tahoma;
+}
+.ce-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 12px;
+    width: 45px;
+    font-family: Tahoma;
+}
+.clr-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 12px;
+    font-family: Tahoma;
+}
+.mc-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    width: 22px;
+    font-family: Tahoma;
+}
+.mr-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    width: 24px;
+    font-family: Tahoma;
+}
+.ms-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    width: 24px;
+    font-family: Tahoma;
+}
+.mpls-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 4px 5px;
+    padding: 0px 2px 0px 0px;
+    width: 24px;
+    font-family: Tahoma;
+}
+.div 
+{
+    border: solid blue 1px;
 }
