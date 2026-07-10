@@ -150,3 +150,258 @@
     /*border-image: linear-gradient(to right, darkblue, lightblue, darkblue);*/
     box-shadow: 0px 0px 1px 1px darkblue;
 }
+.edit-button 
+{
+    border: none;
+    margin: 0px 0px 3px 3px;
+    background-color: #FFECEA00;        /*два последних нуля прозрачность альфа канал*/
+}
+.view-button 
+{
+    border: none;
+    background-color: #FFECEA00;
+}
+.help-button 
+{
+    border: none;
+    background-color: #FFECEA00;
+}
+.display-field 
+{
+    border: solid #8798A9 1px;
+    width: 370px;
+    height: 20px;
+    background-color: white;
+    margin: 2px 0px 0px 12px;
+}
+.empty-button 
+{
+    border: none;
+    width: 22px;
+    height: 22px;
+    margin: 10px 0px 0px 5px;
+    box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 3),
+        inset -1px -1px 0px 0px rgba(255, 255, 255, 0.3);   /*в box shadow можно помещать два inset влияющих на box-shadow (кнопку)*/
+}
+.back-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    width: 80px;
+    height: 22px;
+    padding: 0px 2px 1px 0px;
+    margin: 2px 0px 2px 4px;
+    vertical-align: 6px;
+    font-family: Tahoma;
+}
+    .back-button:hover 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(235, 235, 235),
+            rgb(220, 220, 220),
+            rgb(235, 235, 235)
+        );
+    }
+    .back-button:active {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.ce-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    width: 80px;
+    height: 22px;
+    padding: 0px 2px 1px 0px;
+    margin: 2px 0px 2px 4px;
+    vertical-align: 6px;
+    font-family: Tahoma;
+}
+    .ce-button:hover 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(235, 235, 235),
+            rgb(220, 220, 220),
+            rgb(235, 235, 235)
+        );
+    }
+    .ce-button:active 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.clr-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    width: 80px;
+    height: 22px;
+    padding: 0px 2px 1px 0px;
+    margin: 2px 0px 2px 4px;
+    vertical-align: 6px;
+    font-family: Tahoma;
+}
+    .clr-button:hover 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(235, 235, 235),
+            rgb(220, 220, 220),
+            rgb(235, 235, 235)
+        );
+    }
+    .clr-button:active {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.mc-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    height: 28px;
+    width: 31px;
+    font-family: Tahoma;
+}
+    .mc-button:hover 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(235, 235, 235),
+            rgb(220, 220, 220), 
+            rgb(235, 235, 235)
+        );
+    }
+    .mc-button:active {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.mr-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    height: 28px;
+    width: 31px;
+    font-family: Tahoma;
+}
+    .mr-button:hover 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(235, 235, 235),
+            rgb(220, 220, 220),
+            rgb(235, 235, 235)
+        );
+    }
+    .mr-button:active {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.ms-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    height: 28px;
+    width: 31px;
+    font-family: Tahoma;
+}
+    .ms-button:hover 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(235, 235, 235),
+            rgb(220, 220, 220),
+            rgb(235, 235, 235)
+        );
+    }
+    .ms-button:active 
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.mpls-button 
+{
+    border: solid #08395F 1px;
+    border-radius: 3px;
+    color: #BB1F22;
+    font-size: 14px;
+    margin: 2px 0px 2px 5px;
+    padding: 0px 2px 0px 0px;
+    height: 28px;
+    width: 31px;
+    font-family: Tahoma;
+}
+    .mpls-button:hover                /*hover - активация при наведении на кнопку*/
+    {
+        background-image: linear-gradient(
+            to bottom right,
+        rgb(235, 235, 235),
+        rgb(220, 220, 220),
+        rgb(235, 235, 235)
+        );
+    }
+    .mpls-button:active             /*active - активация при нажатии на кнопку*/
+    {
+        background-image: linear-gradient(
+            to bottom right,
+            rgb(220, 240, 255),
+            rgb(245, 252, 248),
+            rgb(253, 252, 248)
+        );
+    }
+.standart-button {
+    height: 28px;
+    width: 49px;
+}
+.left-button 
+{
+    margin: 8px;
+}
+.blue-but 
+{
+    color: #0000BD;
+}
+.red-but 
+{
+    color: #BB1F22;
+}
