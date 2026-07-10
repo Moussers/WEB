@@ -41,10 +41,14 @@
 {
     display: flex;
     align-items: center;                /*align-items - определяет расположение элементов по высоте*/
+    justify-content: space-between;
+    display: flex;
 }
 .title-bar-left-side, .title-bar-right-side 
 {
     margin: 0px 8px;
+    display: flex;
+    align-items: center;
 }
 .app-icon 
 {
@@ -53,8 +57,8 @@
 }
 .control-button 
 {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     font-weight: 800;
     font-size: 15px;
     padding: 0px 1px 8px 1px;
@@ -67,10 +71,16 @@
         inset -1px -2px 4px 0px #000088,
         inset 4px 2px 4px 0px #7788FF;
 }
+.control-button-signature 
+{
+    font-size: 20px;
+    font-family: 'Courier New';
+    margin: -4px 0px 0px 0px;
+}
 .close-button 
 {
     background-color: rgb(221, 85, 26);
     box-shadow: 
         inset -1px -1px 4px 0px #880000,
-        inset 4px 2px 4px 0px #FF8888; 
+        inset 4px 2px 4px 0px #FF8888;
 }
