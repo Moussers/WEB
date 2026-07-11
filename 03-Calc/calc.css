@@ -15,7 +15,7 @@
 }
 .title-bar
 {
-    width:100%;
+    width:102%;
     height:38px;
     color:white;
     text-shadow: 1px 1px 2px black;
@@ -146,15 +146,19 @@
     height:262px;
     background-color:rgb(235, 233, 216);
     border: solid 3px;
-    border-color:blue;
+    border-image: linear-gradient(to bottom right,
+        rgb(33, 125, 212),
+        rgb(44, 119, 157),
+        rgb(33, 125, 212)
+    ) 1;
     /*border-image: linear-gradient(to right, darkblue, lightblue, darkblue);*/
     box-shadow: 0px 0px 1px 1px darkblue;
 }
-.edit-button 
-{
+
+.edit-button {
     border: none;
     margin: 0px 0px 3px 3px;
-    background-color: #FFECEA00;        /*два последних нуля прозрачность альфа канал*/
+    background-color: #FFECEA00; /*два последних нуля прозрачность альфа канал*/
 }
 .view-button 
 {
