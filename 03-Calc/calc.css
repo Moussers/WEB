@@ -257,7 +257,25 @@ input:focus-visible
     font-size: 11px;
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
-    .calc-buttons > .memory-button, .calc-buttons > .operation-button, .clear-buttons > button 
+.calc-buttons > .memory-button, .calc-buttons > .operation-button, .clear-buttons > button 
+{
+    color: red;
+}
+.calc-buttons button 
+{
+    box-shadow: inset 0px -2px 5px 0px #DDDDDD;
+    border: solid 1px darkblue;
+    border-radius: 3px;
+}
+    .calc-buttons button:hover 
     {
-        color: red;
+        /*background-color: #F5F5F5;*/
+        box-shadow: inset 0px -1px 5px 0px orange;
     }
+    .calc-buttons button:active 
+    {
+        background-color: lightgray;
+        box-shadow: inset 0px -1px 5px 0px #EEEEEE;
+    }
+    
+
