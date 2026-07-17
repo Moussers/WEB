@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction JavaScript</title>
+    <style>
+        code 
+        {
+            color: blue;
+            font-family:Courier New, Courier, monospace;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <h1>Introduction JavaScript</h1>
+        <p>
+            <strong>JavaScript</strong>&#8213; это интрепретируемый общий языка программирования общего назанчения с динамической тпипзацией данных.
+        </p>
+        <p>
+            <strong>Интерпретирумый</strong> значит программа выполянется в исходном виде, т.е., исходный код не преобразуется в машинный код или промежуточный код. В связи с этим ошибок на этапе компиляции и компоновки отсутсвует, есть только ошибки на этапе выполнения.
+            FrontEnd
+        </p>
+        <p>
+            <strong>Динамическая типизация</strong> говорит о том, что тип переменных и констант определяется во время присваивания, по типу значения справа (r-value).
+            l-value = r-value;
+            l-value - выражение слева;
+            r-value - выражение справа;
+        </p>
+    </details>
+    <details>
+        <h2>Перменные и типы данных</h2>
+        <dl>
+            <dt><code style="color:blue">var</code></dt>
+            <dd>объявляет глоабльную переменную, несмотря на область видимости, в которой она объявлена. Если записать значение в несуществующую перменную, то это не вызовет ошибку, это будет аналогично ключевому слову '<code>var</code>';</dd>
+            <dt><code style="color:blue">let</code></dt>
+            <dd>объявляет локальную переменную, только для той области видимости, в которой она используется;</dd>
+            <dt><code style="color:blue">const</code></dt>
+            <dd>объявляет константу. Константы могут быть только локальными;</dd>
+        </dl>
+        <h2>Типы данных</h2>
+        <ol>
+            <li>
+                Примитивные типы:
+                <ul>
+                    <li><code>Boolean</code> &#8213; принимает из двух значений <code>True</code> либо <code>False</code>. Значения: 0, null, '', "", `` неявно преобразуется в <code>False</code>. <code>True</code> &#8213; это любое значение, отличное от нуля или пустой строки.</li>
+                    <li><code>String</code> &#8213; объект, описывающий массив символов;</li>
+                    <li><code>Number</code> &#8213; вещественное (дробное число), которое является полным аналогом типа <code>double</code>. Все числовые литералы не явно преобразуются в Number;</li>
+                    <li><code>Bigint</code> &#8213; целое число неограниченных размеров;</li>
+                </ul>
+            </li>
+            <li>
+                Объекты
+                <ul>
+                    <li><code>Array</code> &#8213;</li>
+                    <li><code>Function</code> &#8213;</li>
+                    <li><code>Object</code> &#8213;</li>
+                    <li><code>Date</code> &#8213;</li>
+                    <li><code>Map</code> &#8213; это дерево;</li>
+                    <li><code>Set</code> &#8213;</li>
+                    <li><code>RegExp</code> &#8213; регулярное выражение;</li>
+                </ul>
+            </li>
+        </ol>
+    </details>
+    <script>
+        //alert("Hello");
+        //var name = prompt("Введите ваше имя: ");    /*prompt - вместо cin/wcin*/
+        //alert(name);                                /*alert - вместо pritn или cout/wcout вывод данных дополниттельным окном*/
+        //alert('Привет ' + prompt("Введите ваше имя: ") + ' we are glad to see you');
+        //alert(`Привет ${prompt("Введите ваше имя: ")}.\nЭто интерполяция строк`);   /*Интреполяция возможна только в обратных одинарных ковычках (backtick - символ обратного апострофа)*/
+        console.log("Информацию также можно выводить в консоль"); /*Вывод информации в консоль браузера*/
+        document.write("<h2>Вывод на экран</h2>");                /*Вывод информации на web-станице*/
+        {
+            const var1 = "Global variable";
+            //var1 = "Глоабльная переменная";
+        }
+        //document.write(var1);
+        document.writeln(5);            /*writeln после числа или символа/стоки савит пробел*/
+        document.writeln(typeof (5));
+        let variable = Number("5");     /*Number - это класс*/
+        document.write(typeof(variable));
+        //alert(5);
+        document.write("<hr>");
+        let a = '5' + -3;       /*оператор + преобарует следующее идущее число в строку и соединяет левые и правые строки в общую строку*/
+        //** - возвдение в степень/
+        document.write(a);
+    </script>
+</body>
+</html>
