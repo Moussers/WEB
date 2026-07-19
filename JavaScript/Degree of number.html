@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Степень числа</title>
+</head>
+<body>
+    <h2>Степень числа</h2>
+    <script>
+        function degreeOfNumber(a, degree)
+        {
+            if (degree == 0)
+            {
+                return 1;
+            }
+            let b = 1;
+            for (let i = 0; i < degree; i++)
+            {
+                b *= a;
+            }
+            for (let i = degree; i < 0; i++) {
+                b /= a;
+            }
+            return b;
+            /*Отрицательная степень тогда мы делим одно число на другое.*/
+        }
+        var number = prompt("Введите число: ");
+        var degree = prompt("Введите степень: ");
+        alert(`Число ${number} в степени ${degree} = ${degreeOfNumber(number, degree)}`);
+    </script>
+</body>
+</html>
