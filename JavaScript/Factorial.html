@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Математические операции</title>
+</head>
+<body>
+    <h2>Факториал</h2>
+    <script>
+        function factorial(number)
+        {
+            if (number < 0)
+            {
+                return 0;
+            }
+            if (number == 0 || number == 1)
+            {
+                return 1;
+            }
+            var factorial = 1;
+            for (let i = number; i > 0; i--)
+            {
+                factorial *= i;
+            }
+            return factorial;
+        }
+        var number = prompt("Введите число: ");
+        //document.write(factorial(number));
+        alert(`Факторил:\n! ${number} = ${(factorial(number))}`)
+    </script>
+</body>
+</html>
