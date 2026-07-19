@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Числа Фибоначи</title>
+</head>
+<body>
+    <h2>Числа Фибоначи</h2>
+    <script>
+        function fibonacci(number)
+        {
+            let l = 1;
+            let r = 1;
+            let str = '1 ';
+            while (r < number)
+            {
+                str += r.toString() + ' ';
+                let tmp = l + r;
+                l = r;
+                r = tmp;
+            }
+            return str;
+        }
+        var number = prompt("Введите число: ");
+        console.log(`Число Фибоначи до ${number}: ${fibonacci(number)}`);
+        alert(`Число Фибоначи до ${number}: ${fibonacci(number)}`);
+    </script>
+</body>
+</html>
