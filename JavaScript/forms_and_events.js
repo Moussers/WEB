@@ -23,14 +23,14 @@ function setImage()
     }
     reader.readAsDataURL(filename.files[0]);
 }
-function setBackgroundColor() 
+function setBackgroundColor(event) 
 {
-    document.body.style.backgroundColor = document.getElementById("background-color").value;
+    document.body.style.backgroundColor = event.target.value;
     //let color = document.getElementById("background-color").value;
     //document.body.style.backgroundColor = color;
     //alert("setBackground-color");
 }
 function setForegroundColor()
 {
-    document.body.style.color = document.getElementById("forehround-color").value;
+    document.body.style.color = document.getElementById("foreground-color").value;
 }

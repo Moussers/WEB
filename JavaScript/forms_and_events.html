@@ -38,8 +38,9 @@
         <div class="colors">
             <div class="select-color">
                 <label for="background-color">Цвет фона</label>
-                <input type="color" id="background-color" value="white" oninput="setBackgroundColor()">
-            </div>
+                <input type="color" id="background-color" value="white" oninput='setBackgroundColor(event)'>
+            </div>  <!--event - это событие-->
+                    <!--target - это элемент control-->
             <div class="select-color">
                 <label for="foreground-color">Цвет текста</label>
                 <input type="color" id="foreground-color" oninput="setForegroundColor()">
