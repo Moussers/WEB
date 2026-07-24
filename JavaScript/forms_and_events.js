@@ -57,3 +57,16 @@ function setColor(event)
     console.log(event.target.ids);
     //alert("setColor");
 }
+document.addEventListener("mousemove", traceMouse);  /*addEventListener - подписка на событие*/
+function traceMouse(e)
+{
+    document.getElementById("mouse").innerHTML = (`X = ${e.clientX}, Y = ${e.clientY}`);
+}
+
+document.getElementById("switch-background").addEventListener("click", switchBackground);
+
+function switchBackground(e)
+{
+    document.getElementById("debug-background").innerHTML =
+        document.getElementById("switch-background").src;
+}

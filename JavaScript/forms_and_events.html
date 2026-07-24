@@ -6,14 +6,23 @@
     <link rel="stylesheet" href="forms_and_events.css" />
     <title>Формы и события</title>
 </head>
-<body>
+<!--<body onmousemove="traceMouse(event)">-->
+<body class="light">
+    <div class="header">
+        <div>Header</div>
+        <div id="mouse"></div>
+        <div id="debug-background"></div>
+        <img src="moon.png" id="switch-background">
+    </div>
+    <hr>
+    <!-- -------------------------------------------------------- -->
     <h1>Формы и события</h1>
     <details>
         <div>
             <h2>Factorial</h2>
             <div class="task">
                 <!--<div class="pair">
-            </div>-->
+                </div>-->
                 <label for="number">Введите целое число от 0 до 170:</label>                   <!--for должен совпадать с id-->
                 <input id="number" type="number" min="0" max="5" onchange="Factorial()">       <!--input - поле ввода-->
                 <button onclick="Factorial()">Вычислить</button>
@@ -26,7 +35,9 @@
             </div>
         </div>
     </details>
-    
+
+    <!-- -------------------------------------------------------- -->
+
     <div class="images-and-colors">
         <div class="upload-image">
             <div class="image-container">
@@ -41,9 +52,9 @@
                 <input type="color" id="background-color" value="white" oninput='setColor(event)'>
             </div>
             <!--e - eventArgs (аргументы события). EventArgs выступает как обработчик события.
-    Обработчик события - это самая обычная функция которая всегда принимает одни те же
-    параметры. В C# принимает ObjectSender и EventArgs, а в JavaScript принимает только
-    EventArgs. EventArgs обычно обозначается буквой e.-->
+            Обработчик события - это самая обычная функция которая всегда принимает одни те же
+            параметры. В C# принимает ObjectSender и EventArgs, а в JavaScript принимает только
+            EventArgs. EventArgs обычно обозначается буквой e.-->
             <!--target - это элемент control (элемент управления) для которого отрабатывает этот event.-->
             <div class="select-color">
                 <label for="foreground-color">Цвет текста</label>
