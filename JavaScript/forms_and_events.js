@@ -67,10 +67,11 @@ document.getElementById("switch-background").addEventListener("click", switchBac
 
 function switchBackground(e)
 {
-    let skin = document.body.id;
+    document.body.className = document.body.className === "dark" ? "light" : "dark";
+    /*let skin = document.body.id;
     let switchButton = document.getElementById("switch-background");
     switchButton.src = skin === "dark" ? "moon.png" : "sun.png";
     document.body.className = skin === "dark" ? "light" : "dark";
     //document.getElementById("debug-background").innerHTML = switchButton.src;
-    document.getElementById("debug-background").innerHTML = document.body.className;
+    document.getElementById("debug-background").innerHTML = document.body.className;*/
 }

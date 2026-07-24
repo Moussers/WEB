@@ -1,24 +1,41 @@
-﻿.header 
+﻿body, #switch-background
+{
+    transition: color 10s, background-color 10s, background-image 10s;
+}
+.header 
 {
     width: 98%;
     display: flex;
     justify-content: space-between;
 }
-    .header img 
+    /*.header img */
+    #switch-background
     {
-        width: 24px;
-        height: 24px; 
+        --bg-size: 32px;       /*Объявляем переменную*/
+        width: var(--bg-size);
+        height: var(--bg-size);
+        padding:0 calc(var(--bg-size)/5);
+        background-size: var(--bg-size) var(--bg-size);
     }
 .dark 
 {
     background-color: #323232;
     color: #C8C8C8;
 }
+    .dark #switch-background 
+    {
+        background-image:url("sun.png");
+        filter: brightness(0) invert(1);
+    }
 .light 
 {
     background-color: white;
     color: black;
 }
+    .light #switch-background 
+    {
+        background-image:url("moon.png");
+    }
 
 /* ////////////////////////////////////////////////////////////// */
 input, div, button 
