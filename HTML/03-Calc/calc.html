@@ -29,7 +29,7 @@
                     <button class="menu-button">Справка</button>
                 </div>
                 <div class="display-container">
-                    <input type="text" class="display"/>
+                    <input type="text" class="display" id="calcDisplay" value="0"/>
                 </div>
                 <div class="calc-buttons">
                     <!--<div class="memory-buttons">
@@ -41,38 +41,38 @@
                     </div>-->
                      <div class="square"></div>
                     <div class="clear-buttons">
-                        <button>Backspace</button>
-                        <button>CE</button>
-                        <button>C</button>
+                        <button onclick="BackWard()">Backspace</button>
+                        <button onclick="deleteNum()">CE</button>
+                        <button onclick="deleteNumAndOper()">C</button>
                     </div>
                 <!-- ----------------------------------------------- -->
-                    <button class="memory-button">MC</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button class="operation-button">/</button>
-                    <button>sqrt</button>
+                    <button class="memory-button" onclick="clearMemory()">MC</button>
+                    <button id="sevenButt" onclick="setNumber('7')">7</button>
+                    <button id="eightButt" onclick="setNumber('8')">8</button>
+                    <button id="nineButt" onclick="setNumber('9')">9</button>
+                    <button class="operation-button" id="divButt" onclick="setOperation('div')">/</button>
+                    <button id="sqrtButt" onclick="sqrt()">sqrt</button>
                 <!-- ----------------------------------------------- -->
-                    <button class="memory-button">MR</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button class="memory-button">*</button>
-                    <button>%</button>
+                    <button class="memory-button" onclick="FromDiplayInMem()">MR</button>
+                    <button id="fourButt" onclick="setNumber('4')">4</button>
+                    <button id="fiveButt" onclick="setNumber('5')">5</button>
+                    <button id="sixButt" onclick="setNumber('6')">6</button>
+                    <button class="memory-button" id="multiButt" onclick="setOperation('multi')">*</button>
+                    <button id="procentButt" onclick="persentFrom()">%</button>
                 <!-- ----------------------------------------------- -->
-                    <button class="memory-button">MS</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button class="operation-button">-</button>
-                    <button>1/x</button>
+                    <button class="memory-button" onclick="FromMemInDisplay()">MS</button>
+                    <button id="oneButt" onclick="setNumber('1')">1</button>
+                    <button id="twoButt" onclick="setNumber('2')">2</button>
+                    <button id="threeButt" onclick="setNumber('3')">3</button>
+                    <button id="minusButt" class="operation-button" onclick="setOperation('minus')">-</button>
+                    <button id="inverButt" onclick="invertNum()">1/x</button>           <!--onclick() - позволяет обратиться к функции из формы (пример: button) -->
                 <!-- ----------------------------------------------- -->
-                    <button class="memory-button">M+</button>
-                    <button>0</button>
-                    <button>+/-</button>
-                    <button>.</button>
-                    <button class="operation-button">+</button>
-                    <button class="operation-button">=</button>
+                    <button class="memory-button" onclick="AddValueInMem()">M+</button>
+                    <button id="nullButt" onclick="setNumber('0')">0</button>
+                    <button id="plusMinus" onclick="plusMunus()">+/-</button>
+                    <button id="setDot" onclick="setDot()">.</button>
+                    <button class="operation-button" id="plusButt" onclick="setOperation('plus')">+</button>
+                    <button class="operation-button" id="equalButt" onclick="setOperation('none')">=</button>
                 </div>
             </div>
         </div>
