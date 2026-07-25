@@ -1,4 +1,4 @@
-// JavaScript source code
+п»ї// JavaScript source code
 
 const disp = document.getElementById('calcDisplay');
 let operation = "none";
@@ -44,7 +44,7 @@ function plusMunus ()
 {
     let text = disp.value;
     if (text[0] == '-') {
-        text = tex.replace("-", "");    /*replace - заменяет минус на пустую строку*/
+        text = tex.replace("-", "");    /*replace - Р·Р°РјРµРЅСЏРµС‚ РјРёРЅСѓСЃ РЅР° РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ*/
     }
     else
     {
@@ -57,9 +57,9 @@ function plusMunus ()
 function setDot()
 {
     let text = disp.value;
-    if (text.includes("."))
+    if (!text.includes("."))
     {
-        text = '.';
+        text += '.';
     }
     disp.value = text;
     newNum = false;
@@ -69,7 +69,7 @@ function setOperation(oper)
     if (!newNum)
     {
         executeOperation();
-        prev = Number(disp.value);        /*Number - это класс который переводит число в строку*/
+        prev = Number(disp.value);        /*Number - СЌС‚Рѕ РєР»Р°СЃСЃ РєРѕС‚РѕСЂС‹Р№ РїРµСЂРµРІРѕРґРёС‚ С‡РёСЃР»Рѕ РІ СЃС‚СЂРѕРєСѓ*/
         newNum = true;
     }
     operation = oper;
@@ -96,8 +96,8 @@ function persentFrom()
 function BackWard()
 {
     let text = disp.value.slice(0, -1);
-    /*slice  копирует строку от начала первым аргументом и до последнего аргумента, но не до последнего */
-    /*от начала и до конца*/
+    /*slice  РєРѕРїРёСЂСѓРµС‚ СЃС‚СЂРѕРєСѓ РѕС‚ РЅР°С‡Р°Р»Р° РїРµСЂРІС‹Рј Р°СЂРіСѓРјРµРЅС‚РѕРј Рё РґРѕ РїРѕСЃР»РµРґРЅРµРіРѕ Р°СЂРіСѓРјРµРЅС‚Р°, РЅРѕ РЅРµ РґРѕ РїРѕСЃР»РµРґРЅРµРіРѕ */
+    /*РѕС‚ РЅР°С‡Р°Р»Р° Рё РґРѕ РєРѕРЅС†Р°*/
     if (text == "")
     {
         text = "0";
@@ -129,18 +129,18 @@ function clearMemory()
 function FromMemInDisplay()
 {
     disp.value = memory.toString();
-    /*значение из памяти мы записываем дисплэй*/
+    /*Р·РЅР°С‡РµРЅРёРµ РёР· РїР°РјСЏС‚Рё РјС‹ Р·Р°РїРёСЃС‹РІР°РµРј РґРёСЃРїР»СЌР№*/
 }
 
 function FromDiplayInMem()
 {
     memory = Number(disp.value);
-    /*значение устанавливаем в память*/
+    /*Р·РЅР°С‡РµРЅРёРµ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РІ РїР°РјСЏС‚СЊ*/
 }
 
 function AddValueInMem()
 {
     memory += Number(disp.value);
-    /*прибавляем к уже имеющемуся занчению в памяти дополнительное значение */
+    /*РїСЂРёР±Р°РІР»СЏРµРј Рє СѓР¶Рµ РёРјРµСЋС‰РµРјСѓСЃСЏ Р·Р°РЅС‡РµРЅРёСЋ РІ РїР°РјСЏС‚Рё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ */
 }
 
