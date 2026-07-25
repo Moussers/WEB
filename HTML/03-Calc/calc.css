@@ -147,7 +147,6 @@
     border-color:blue;
     box-shadow: inset 1px -1px 1px 0px darkblue;
     background-color: blue;
-    /*background-image: linear-gradient(to right, blue, darkblue);*/
     box-shadow: 
         inset 1px -1px 1px 0px darkblue, 
         inset -1px -1px 2px 1px darkblue;
@@ -201,26 +200,12 @@ input:focus-visible
     outline:none;
 }
 /* ////////////////////////////////////////////////////////////////// */
-/*.memory-buttons 
-{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:50px;
-    padding:0px;
-}
-    .memory-buttons > button 
-    {
-        height:38px;
-        margin:1px;
-    }
-*/  
+ 
 .calc-buttons 
 {
     margin:8px auto;
     width:90%;
     height:70%;
-    /*border:solid 1px;*/
     display:grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: repeat(6, auto);
@@ -245,7 +230,6 @@ input:focus-visible
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end:7;
-    /*border: solid 1px;*/
 }
     .clear-buttons > button 
     {
@@ -269,7 +253,6 @@ input:focus-visible
 }
     .calc-buttons button:hover 
     {
-        /*background-color: #F5F5F5;*/
         box-shadow: inset 0px -1px 5px 0px orange;
     }
     .calc-buttons button:active 
