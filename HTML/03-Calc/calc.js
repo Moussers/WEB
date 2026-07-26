@@ -44,7 +44,7 @@ function plusMunus ()
 {
     let text = disp.value;
     if (text[0] == '-') {
-        text = tex.replace("-", "");    /*replace - заменяет минус на пустую строку*/
+        text = text.replace("-", "");    /*replace - заменяет минус на пустую строку*/
     }
     else
     {
@@ -97,7 +97,7 @@ function BackWard()
 {
     let text = disp.value.slice(0, -1);
     /*slice  копирует строку от начала первым аргументом и до последнего аргумента, но не до последнего */
-    /*от начала и до конца*/
+    /*от начального элемента и до конечного элемента*/
     if (text == "")
     {
         text = "0";

@@ -1,7 +1,7 @@
-// JavaScript source code
+п»ї// JavaScript source code
 
 const element = document.getElementById('myElement');
-//Добавление класса к элементу
+//Р”РѕР±Р°РІР»РµРЅРёРµ РєР»Р°СЃСЃР° Рє СЌР»РµРјРµРЅС‚Сѓ
 //element.classList.add('highlight');
 function toggleHighlight()
 {
