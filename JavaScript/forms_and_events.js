@@ -35,6 +35,8 @@ function setForegroundColor()
 {
     document.body.style.color = document.getElementById("foreground-color").value;
 }
+let colors = document.getElementById("foreground-color");
+colors.addEventListener("input", setColor);
 function setColor(event)
 {
     /*
@@ -67,6 +69,8 @@ document.getElementById("switch-background").addEventListener("click", switchBac
 
 function switchBackground(e)
 {
+    document.body.style.backgroundColor = '';
+    document.body.style.color = '';
     document.body.className = document.body.className === "dark" ? "light" : "dark";
     /*let skin = document.body.id;
     let switchButton = document.getElementById("switch-background");
@@ -85,3 +89,25 @@ function setDelay(e)
     console.log(document.body.style);
     console.log(document.getElementById('#switch-background')).style;
 }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+function AddLeadingZero(number)
+{
+    return number < 10 ? "0" + `${number}` : `${number}`;
+}
+function tickTimer()
+{
+    let date = new Date();
+    document.getElementById("raw-date").innerHTML = date.toString();
+
+    document.getElementById("hours").innerHTML =    AddLeadingZero(date.getHours());
+    document.getElementById("minutes").innerHTML =  AddLeadingZero(date.getMinutes());
+    document.getElementById("seconds").innerHTML = AddLeadingZero(date.getSeconds());
+
+    document.getElementById("years").innerHTML = AddLeadingZero(date.getFullYear());
+    document.getElementById("months").innerHTML = AddLeadingZero(date.getMonth() + 1);
+    document.getElementById("days").innerHTML = AddLeadingZero(date.getDate());
+    setTimeout(tickTimer, 100);
+}
+tickTimer();
