@@ -1,4 +1,4 @@
-// JavaScript source code
+ï»¿// JavaScript source code
 function Factorial()
 {
     let numberElement = document.getElementById("number");
@@ -8,7 +8,7 @@ function Factorial()
     for (let i = 1n; i <= number; i++) {
         f *= i;
     }
-    /*n - îáîçíà÷àåò, ÷òî ÷èñëî çàïèñàíî êàê BigInt*/
+    /*n - Ð¾Ð±Ð¾Ð·Ð½Ð°Ñ‡Ð°ÐµÑ‚, Ñ‡Ñ‚Ð¾ Ñ‡Ð¸ÑÐ»Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð¾ ÐºÐ°Ðº BigInt*/
     //resultElement.value = `${number}! = ${f}`;
     resultElement.innerHTML = `${number}! = ${f}`;
 }
@@ -39,10 +39,10 @@ function setColor(event)
 {
     /*
     ----------------------------------------------------
-    == - ñðàâíèâàåò äâà çíà÷åíèÿ;
-    === - ñðàâíèâàåò äâà çíà÷åíèÿ è òèïû ýòèõ çíà÷åíèé.
-    === - âîçâðàùàåò 'true' òîëüêî â òîì ñëó÷àå,
-            åñëè ñîâïàäàþò êàê çíà÷åíèÿ, òàê è òèïû;
+    == - ÑÑ€Ð°Ð²Ð½Ð¸Ð²Ð°ÐµÑ‚ Ð´Ð²Ð° Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ;
+    === - ÑÑ€Ð°Ð²Ð½Ð¸Ð²Ð°ÐµÑ‚ Ð´Ð²Ð° Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð¸ Ñ‚Ð¸Ð¿Ñ‹ ÑÑ‚Ð¸Ñ… Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹.
+    === - Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ 'true' Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð² Ñ‚Ð¾Ð¼ ÑÐ»ÑƒÑ‡Ð°Ðµ,
+            ÐµÑÐ»Ð¸ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°ÑŽÑ‚ ÐºÐ°Ðº Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ, Ñ‚Ð°Ðº Ð¸ Ñ‚Ð¸Ð¿Ñ‹;
     ----------------------------------------------------
     */
     document.body.style[(event.target.id === 'background-color' ? 'backgroundColor' : 'color')] = event.target.value;
@@ -57,7 +57,7 @@ function setColor(event)
     console.log(event.target.ids);
     //alert("setColor");
 }
-document.addEventListener("mousemove", traceMouse);  /*addEventListener - ïîäïèñêà íà ñîáûòèå*/
+document.addEventListener("mousemove", traceMouse);  /*addEventListener - Ð¿Ð¾Ð´Ð¿Ð¸ÑÐºÐ° Ð½Ð° ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ðµ*/
 function traceMouse(e)
 {
     document.getElementById("mouse").innerHTML = (`X = ${e.clientX}, Y = ${e.clientY}`);
@@ -74,4 +74,14 @@ function switchBackground(e)
     document.body.className = skin === "dark" ? "light" : "dark";
     //document.getElementById("debug-background").innerHTML = switchButton.src;
     document.getElementById("debug-background").innerHTML = document.body.className;*/
+}
+document.getElementById("switch-background-delay").addEventListener("change", setDelay);
+function setDelay(e)
+{
+    let delay = e.target.value;
+    //alert(`Delay: ${delay}`);
+    document.body.style.transition = document.getElementById('switch-background').style.transition =
+        `color ${delay}s, background-color ${delay}s, background-image ${delay}s`;
+    console.log(document.body.style);
+    console.log(document.getElementById('#switch-background')).style;
 }
