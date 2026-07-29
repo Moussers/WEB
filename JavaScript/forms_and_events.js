@@ -110,8 +110,55 @@ function tickTimer()
     document.getElementById("days").innerHTML =     AddLeadingZero(date.getDate());
 
     document.getElementById("day-of-week").innerHTML = date.toLocaleDateString("en", { weekday: 'long' });
+
     document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? 'visible' : 'hidden';
     document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? 'visible' : 'hidden';
     setTimeout(tickTimer, 100);
 }
 tickTimer();
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+document.getElementById('btn-start').addEventListener("click", startCountdownTimer);
+function startCountdownTimer()
+{
+    let targetDate = document.getElementById("target-date");
+    let targetTime = document.getElementById("target-time");
+    let btnStart = document.getElementById("btn-start");
+    if (btnStart.value === "Start") {
+        btnStart.value = "Stop";
+        targetDate.disabled = targetTime.disabled = true;
+        tickCountdown();
+    }
+    else
+    {
+        btnStart.value = "Start";
+        targetDate.disabled = targetTime.disabled = false;
+    }
+}
+function tickCountdown()
+{
+    let now = new Date();
+    let targetDateControl = document.getElementById("target-date");
+    let targetTimeControl = document.getElementById("target-time");
+
+    let targetDateValue = targetDateControl.valueAsDate;
+    let targetTimeValue = targetTimeControl.valueAsDate;
+
+    document.getElementById("timezone").innerHTML = now.getTimezoneOffset() / 60;
+    //Выравниваем часовой пояс:
+    targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
+    targetTimeValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() / 60);
+
+    targetTimeValue.setFullYear(targetDateValue.getFullYear());
+    targetTimeValue.setMonth(targetDateValue.getMonth());
+    targetTimeValue.setDate(targetDateValue.getDate());
+
+    let duration = targetTimeValue - now;
+    document.getElementById("duration").innerHTML = duration;
+
+    document.getElementById("target-date-value").innerHTML = targetDateValue;
+    document.getElementById("target-time-value").innerHTML = targetTimeValue;
+
+    setTimeout(tickCountdown, 100);
+}
