@@ -103,11 +103,15 @@ function tickTimer()
 
     document.getElementById("hours").innerHTML =    AddLeadingZero(date.getHours());
     document.getElementById("minutes").innerHTML =  AddLeadingZero(date.getMinutes());
-    document.getElementById("seconds").innerHTML = AddLeadingZero(date.getSeconds());
+    document.getElementById("seconds").innerHTML =  AddLeadingZero(date.getSeconds());
 
-    document.getElementById("years").innerHTML = AddLeadingZero(date.getFullYear());
-    document.getElementById("months").innerHTML = AddLeadingZero(date.getMonth() + 1);
-    document.getElementById("days").innerHTML = AddLeadingZero(date.getDate());
+    document.getElementById("years").innerHTML =    AddLeadingZero(date.getFullYear());
+    document.getElementById("months").innerHTML =   AddLeadingZero(date.getMonth() + 1);
+    document.getElementById("days").innerHTML =     AddLeadingZero(date.getDate());
+
+    document.getElementById("day-of-week").innerHTML = date.toLocaleDateString("en", { weekday: 'long' });
+    document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? 'visible' : 'hidden';
+    document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? 'visible' : 'hidden';
     setTimeout(tickTimer, 100);
 }
 tickTimer();
