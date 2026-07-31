@@ -84,7 +84,7 @@ label
 #factorial-result 
 {
     overflow: scroll;
-    width: 400px;
+    width: 100%;
     height: 400px;
 }
 
@@ -162,6 +162,7 @@ label
     height: 148px;
     background-color: Highlight;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .time-marker 
@@ -169,4 +170,5 @@ label
     border: solid 1px;
     background-color: darkred;
     color: aliceblue;
+    text-align: center
 }

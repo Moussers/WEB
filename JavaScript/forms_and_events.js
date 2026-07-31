@@ -122,13 +122,14 @@ tickTimer();
 document.getElementById('btn-start').addEventListener("click", startCountdownTimer);
 function startCountdownTimer()
 {
+    let li = document.createElement("li");
+    li.innerHTML = "Before";
     let targetDate = document.getElementById("target-date");
     let targetTime = document.getElementById("target-time");
     let btnStart = document.getElementById("btn-start");
     if (btnStart.value === "Start") {
         btnStart.value = "Stop";
         targetDate.disabled = targetTime.disabled = true;
-        tickCountdown();
         resetDisplay();
         tickCountdown();
     }
@@ -142,6 +143,7 @@ function tickCountdown()
 {
     if (document.getElementById("btn-start").value == "Start") return;
     let now = new Date();
+
     let targetDateControl = document.getElementById("target-date");
     let targetTimeControl = document.getElementById("target-time");
 
@@ -158,11 +160,10 @@ function tickCountdown()
     targetTimeValue.setDate(targetDateValue.getDate());
 
     let timestamp = targetTimeValue - now;
-    let duration = Math.trunc(timestamp / 1000);        /*tranc -  отбрасывает дробную строку*/
+    let duration = Math.trunc(timestamp / 1000);        /*tranc - отбрасывает дробную строку*/
 
     document.getElementById("timestamp").innerHTML = timestamp; /*с полуночи 1970 года*/
-    document.getElementById("duration").innerHTML = duration; 
-
+    document.getElementById("duration").innerHTML = duration;
     document.getElementById("target-date-value").innerHTML = targetDateValue;
     document.getElementById("target-time-value").innerHTML = targetTimeValue;
 
@@ -176,12 +177,12 @@ function tickCountdown()
 
     let time_of_day = duration % SECONDS_PER_DAY;
     let date = Math.floor(duration / SECONDS_PER_DAY);
-    date = date * SECONDS_PER_DAY; //убираем время дня полученное выше
+    date = date * SECONDS_PER_DAY;      //убираем время дня, полученное выше
 
     let years = Math.floor(date / SECONDS_PER_YEAR);
     if (years > 0) {
-        date = date % SECONDS_PER_YEAR; //Если промежуток времени больше, убираем годы, поскольку
-        //Получаем блок, отображающий годы: 
+        date = date % SECONDS_PER_YEAR; //Если промежуток времени больше года, убираем годы, поскольку мы их уже получили
+        //Получаем блок отображающий годы:
         let years_unit = document.getElementById("years-unit");
         //Если соотвествующего блока нет на странице, то создаём его:
         if (years_unit == null) {
@@ -198,7 +199,7 @@ function tickCountdown()
         date = date % SECONDS_PER_MONTH;
         let months_unit = document.getElementById("months-unit");
         if (months_unit == null) {
-            months_block = createTimeBlock("months", months);
+            let months_block = createTimeBlock("months", months);
             let hours_block = document.getElementById("hours-unit").parentElement;
             hours_block.before(months_block);
         }
@@ -209,13 +210,13 @@ function tickCountdown()
     let weeks = Math.floor(date / SECONDS_PER_WEEK);
     if (weeks > 0) {
         date = date % SECONDS_PER_WEEK;
-        let weeks_unit = document.getElementById("week_unit");
+        let weeks_unit = document.getElementById("weeks-unit");
         if (weeks_unit == null) {
             let weeks_block = createTimeBlock("weeks", AddLeadingZero(weeks));
             let hours_block = document.getElementById("hours-unit").parentElement;
             hours_block.before(weeks_block);
         }
-        else weeks_unit.innerHTML = AddLeadingZero(week);
+        else weeks_unit.innerHTML = AddLeadingZero(weeks);
     }
     else removeTimeBlock("weeks");
 
@@ -254,8 +255,7 @@ function createTimeBlock(name, value)
     let marker = document.createElement("div");
     marker.id = `${name}-marker`;
     marker.className = "time-marker";
-    marker.innerHTML = name.charAt().toUpperCase() + name.slice(1);
-    //marker.innerHTML = name.chartAt(0).toUpperCase() + name.slice(1);
+    marker.innerHTML = name.charAt(0).toUpperCase() + name.slice(1);    /*slice(1) - возвращает подстроку начиная с первого элемента строки*/
 
     time_block.prepend(unit);
     time_block.append(marker);
