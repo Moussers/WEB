@@ -245,7 +245,7 @@ function tickCountdown()
 function createTimeBlock(name, value)
 {
     let time_block = document.createElement("div");
-    time_block.className = "time_block";
+    time_block.className = "time-block";
 
     let unit = document.createElement("div");
     unit.id = `${name}-unit`;
